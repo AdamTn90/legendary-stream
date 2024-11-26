@@ -1,418 +1,570 @@
 <!DOCTYPE html>
-<!-- saved from url=(0039)https://the-legendstation.w3spaces.com/ -->
-<html lang="en"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <title>Streaming Service</title>
-  <link rel="icon" href="https://i.ibb.co/znVXJHq/129.jpg">
-  <style>
-    /* CSS styles */
-    body {
-      margin: 0;
-      font-size:auto; 
-      background-color:black;
-    }
-    .container {
-      margin: 0 auto;
-    }
-    header {
-      
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    .title{
-      
-    font-size:60px;
-    color: #294273;
-    font-family: Times New Roman;
-    text-shadow: 0px 0px 0 rgb(-9,16,65),1px 1px  0 rgb(-59,-34,15),2px 2px 1px rgba(255,31,31,0.6),2px 2px 1px rgba(255,31,31,0.5),0px 0px 1px rgba(255,31,31,.2);
- }
-    
-    
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legendary Streams</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<style>
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #141E30, #243B55);
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(27, 38, 59, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    color: #FFD700;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
 nav {
-    text-align: center; /* Center the content horizontally */
-    background-color: black;
-    padding: 20px 0; /* Add padding at the top and bottom for spacing */
-
-}
-
-nav ul {
-    list-style-type: none;
     display: flex;
-    justify-content: center; /* Center the list items horizontally within the container */
-    align-items: center; /* Center the list items vertically within the container */
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    background-color: rgba(22, 36, 71, 0.95);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
 }
 
 nav a {
+    color: #ffffff;
     text-decoration: none;
-    font-family: cursive;
-    color: white;
-    font-size: 25px; /* Increase the font size */
-    padding: 15px 30px; /* Increase the padding for larger clickable area */
-    transition: background-color 0.1s, color 0.1s;
-}
-
-nav a:hover {
-    background-color: red;
-    font-size: 30px;
-    font-family: cursive;
-    color: yellow;
-    text-shadow: 4px 4px black;
-}
- 
-    main {
-      padding: 20px;  
-      text-align: center;
-    }
-    
-    section {
-      display: none;
-      padding: 0px;
-      color: whitesmoke;
-      background-color: black;
-    }
-    
-    section.active {
-      display: block;
-    }
-    .css-3d-text {
-    font-size: 49px;
-    color: #000000;
-    font-family: monospace;
-    text-shadow: 0px 0px 0 rgb(-11,-11,0),0px -1px 0 rgb(-22,-22,0),0px -2px 0 rgb(-33,-33,0),0px -3px 0 rgb(-44,-44,0),0px -4px 0 rgb(-55,-55,0),0px -5px 0 rgb(-66,-66,0),0px -6px  0 rgb(-77,-77,0),0px -7px 6px rgba(255,31,31,0.89),0px -7px 1px rgba(255,31,31,0.5),0px 0px 6px rgba(255,31,31,.2);
- }
-/* Center the table */
-
-table {
-    margin: 0 auto;
-    width: 60%; /* Adjust the width as needed */
-    border-collapse: collapse;
-    display:auto;
-    font-family: Arial, Helvetica, sans-serif;
-    border: gold 0.3px dashed ;
-    box-shadow: 6px 2px 0.5px blue;
-}
-
-/* Style the table header */
-th {
-    text-align: center;
-    background-color: blue;
-    padding: 20px;
-    font-size: 22px;
-    color: black;
-    text-shadow: 3px 1px rgb(78, 130, 30);
-    border: gold 0.3px dashed ;
-    border-collapse: collapse;
-
-    
-}
-
-/* Style the table cells */
-td {
-    padding: 10px;
-    text-align: center;
-    border: gold  0.3px dashed ;
-}
-
-/* Style the odd rows with a background color */
-tbody tr:nth-child(odd) {
-    background-color: black;
-}
-
-
-/* Style the team logos */
-.logo {
-    width: 40px; /* Increase the size of logos */
-    height: 40px; /* Increase the size of logos */
-}
-
-/* Style the team names */
-.team-name {
-    font-size: 16px; /* Increase the font size */
-    margin-top: 5px;
-
-
-}
-
-/* Style the "vs" separator */
-td:nth-child(4) {
-    font-size: 18px; /* Increase the font size */
+    margin: 10px 20px;
     font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Style the streaming channels */
-.stream-channels {
-    font-size: 16px; /* Increase the font size */
-    font-style: italic;
-    font-family: fantasy;
-    color: red;
+nav a:hover, nav a.active {
+    background-color: #FFD700;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section.active {
+    display: block;
+}
+
+.fixture-list {
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.fixture-list th {
+    background-color: rgba(27, 38, 59, 0.9);
+    color: #FFD700;
+    padding: 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #FFD700;
+}
+
+.match-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    min-width: 120px;
+}
+
+.team-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.team-name {
+    font-size: 0.9em;
+    color: #FFD700;
     text-align: center;
 }
-  </style>
 
-</head>
+.countdown {
+    color: #4CAF50;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 5px;
+}
 
-<body>
+.country-channels {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+}
 
-  <div class="container">
+.country-channels h3 {
+    color: #FFD700;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+}
 
-    <header>
-      <!-----<a href="https://ibb.co/3rmpzYg"></a>---->
-      <h1 class="title">The legend station </h1>
-      <img src="./Streaming Service_files/129.jpg" title="logo" height="50px">
-    </header>
+.country-channels h3:hover {
+    background: rgba(255, 215, 0, 0.1);
+}
 
-    <nav class="12">
-      <ul>
-        <li><a href="https://the-legendstation.w3spaces.com/#" data-section="home">TODAY MATCH</a></li>
-        <li><a href="https://the-legendstation.w3spaces.com/#" data-section="matches">Matches Live </a></li>
-        <li><a href="https://the-legendstation.w3spaces.com/#" data-section="channels">LIVE TV Channels</a></li>
-      </ul>
-    </nav>
-  
-    <main>
+.channel-list {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.channel-list.active {
+    display: grid;
+}
+
+.watch-btn {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.watch-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
     
-      <section id="home" class="active">        
-        <div class="css-3d-text"><h1> upcoming matches: </h1></div>            
-         <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Home Team</th>
-        <th></th>
-        <th>Away Team</th>
-        <th>Streaming Channels</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-       <td>march 7</td>
-        <td>9:00pm</td>
-        <td>
-          <img class="logo" src="./Streaming Service_files/FC_Barcelona_(crest).svg.png" alt="Team 1 Logo">
-        </td>
-        <td>vs</td>
-        <td>
-          <img class="logo" src="./Streaming Service_files/42pOuT0" alt="Team 2 Logo">
-        </td>
-        <td class="stream-channels">ESPN, Fox Sports</td>
-      </tr>
-      <tr>
-        <td> April  7  </td>
-        <td>7:30 PM</td>
-        <td>
-          <img class="logo" src="./Streaming Service_files/Flag_of_Italy.svg.png" alt="Team 3 Logo">
-        </td>
-        <td>vs</td>
-        <td>
-          <img class="logo" src="./Streaming Service_files/Flag_of_England.svg.png"  alt="Team 4 Logo">
-        </td>
-        <td class="stream-channels">NBC Sports, beIN Sports</td>
-      </tr>
-      <tr>
-       <td>march 7</td>
-        <td>9:00pm</td>
-        <td>
-          <img class="logo" src="./Streaming Service_files/FC_Barcelona_(crest).svg.png" alt="Team 1 Logo">
-        </td>
-        <td>vs</td>
-        <td>
-          <img class="logo" src="./Streaming Service_files/42pOuT0" alt="Team 2 Logo">
-        </td>
-        <td class="stream-channels">ESPN, Fox Sports</td>
-      </tr>
-      <tr>
-        <td> april 7   </td>
-        <td>7:30 PM</td>
-        <td>
-          <img class="logo" src="./Streaming Service_files/Flag_of_Italy.svg.png" alt="Team 3 Logo">
-        </td>
-        <td>vs</td>
-        <td>
-          <img class="logo" src="./Streaming Service_files/Flag_of_England.svg.png"  alt="Team 4 Logo">
-        </td>
-        <td class="stream-channels">NBC Sports, <br> beIN Sports</td>
-      </tr>
-    </tbody>
-  </table>
-        
-      </section>
-      
-      <section id="matches">
-        <h2>Matches</h2>
-        <p>Matches section content...</p>
-        
-        <style>
-  
-          .tv-container {
-              position: relative;
-          }
-  
-          .tv-box {
-              width: 500px;
-              height: 300px;
-              border: 2px solid #000;
-              border-radius: 20px;
-              box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-              background: #000;
-              color: #fff;
-              padding: 20px;
-              display: none;
-              animation: fadeIn 0.5s ease-in-out;
-          }
-  
-          .close-button {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              cursor: pointer;
-              background-color: #fff;
-              color: #000;
-              border: none;
-              padding: 5px 10px;
-              border-radius: 5px;
-              transform: rotate(45deg);
-              transition: transform 0.3s ease-in-out;
-          }
-  
-          .close-button:hover {
-              transform: rotate(45deg) scale(1.2);
-          }
-  
-          .video-wrapper {
-              width: 100%;
-              height: 100%;
-              border-radius: 10px;
-              overflow: hidden;
-          }
-  
-          .video-player {
-              width: 100%;
-              height: 100%;
-          }
-  
-          .images-holder {
-              display: flex;
-              justify-content: center;
-              margin-top: 20px;
-          }
-  
-          .image-holder {
-              position: relative;
-              margin: 10px;
-              overflow: hidden;
-              border-radius: 10px;
-              transition: transform 0.3s ease-in-out;
-          }
-  
-          .image-holder:hover {
-              transform: scale(1.1);
-          }
-  
-          .thumbnail {
-              cursor: pointer;
-              width: 120px;
-              border-radius: 10px;
-          }
-  
-          @keyframes fadeIn {
-              from {
-                  opacity: 0;
-              }
-              to {
-                  opacity: 1;
-              }
-          }
-      </style>
-  </head>
-  <body>
-      <div class="container">
-          <div class="tv-container">
-              <div class="tv-box" id="box">
-                  <button class="close-button" onclick="closeBox()">X</button>
-                  <div class="video-wrapper">
-                      <video class="video-player" controls>
-                          <source src="" type="video/mp4">
-                          Your browser does not support the video tag.
-                      </video>
-                  </div>
-              </div>
-              <div class="images-holder">
-                  <div class="image-holder" onclick="openBox('video1.mp4')">
-                      <img class="thumbnail" src="image1.jpg" alt="Image 1">
-                  </div>
-                  <div class="image-holder" onclick="openBox('video2.mp4')">
-                      <img class="thumbnail" src="image2.jpg" alt="Image 2">
-                  </div>
-                  <div class="image-holder" onclick="openBox('video3.mp4')">
-                      <img class="thumbnail" src="image3.jpg" alt="Image 3">
-                  </div>
-                  <!-- Add more image holders as needed -->
-              </div>
-          </div>
-      </div>
-  
-      <script>
-          function openBox(videoSource) {
-              var box = document.getElementById('box');
-              var video = box.querySelector('.video-player');
-              video.src = videoSource;
-              box.style.display = 'block';
-          }
-  
-          function closeBox() {
-              var box = document.getElementById('box');
-              box.style.display = 'none';
-          }
-      </script>
-      </section>
-       
-      <section id="channels">
-        <h2>Channels</h2>
-        <p>Channels section content...</p>
-        
-      </section>
-      
-    </main>
+    max-width: 800px;
+    background-color: #1B263B;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
 
-  </div>
-  
-  <script>
-    // Nav click handler
-    const navLinks = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('section');
+.close-btn {
+    position: absolute;
+    top:20% ;
+    right: 60px;              /* Adjusted to position it closer to the right */
+    color: red;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; /* Added color transition */
+    z-index: 1001;           /* Ensure it's above the modal content */
+}
 
-    navLinks.forEach(link => {
-      link.addEventListener('click', e => {
+/* Responsive Design */
+@media (max-width: 768px) {
+    .match-cell {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .team-container {
+        margin: 10px 0;
+    }
+    
+    .fixture-list td {
+        padding: 15px 10px;
+    }
+    
+    nav a {
+        margin: 5px;
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .channel-list {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>Legendary Streams</h1>
+</header>
+
+<nav>
+    <a href="#" data-section="home" class="active">Today's Matches</a>
+    <a href="#" data-section="channels">TV Channels</a>
+</nav>
+
+<main>
+    <section id="home" class="active">
+        <h2 class="css-3d-text">UPCOMING FIXTURES</h2>
+        <table class="fixture-list">
+            <thead>
+                <tr>
+                    <th>Match</th>
+                    <th>Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+<!-- Barcelona vs Real Madrid -->
+                <tr>
+                    <td>
+                        <div class="match-cell">
+                            <div class="team-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png" class="team-logo" alt="Barcelona">
+                                <span class="team-name">Barcelona</span>
+                            </div>
+                            <span>vs</span>
+                            <div class="team-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" class="team-logo" alt="Real Madrid">
+                                <span class="team-name">Real Madrid</span>
+                            </div>
+                        </div>
+                        <span class="match-status status-upcoming">Upcoming</span>
+                        <div class="countdown" data-date="2024-11-13 20:00:00">--:--:--</div>
+                    </td>
+                    <td>
+                        <div class="match-time">
+                            <span class="date">Nov 13, 2024</span>
+                            <span class="time">20:00</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="watch-btn" data-video="https://stream1.example.com/barcelona-real.m3u8">
+                            <i class="fas fa-play-circle"></i> Watch
+                        </button>
+                    </td>
+                </tr>
+
+                <!-- Manchester United vs Liverpool -->
+                <tr>
+                    <td>
+                        <div class="match-cell">
+                            <div class="team-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png" class="team-logo" alt="Manchester United">
+                                <span class="team-name">Manchester United</span>
+                            </div>
+                            <span>vs</span>
+                            <div class="team-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png" class="team-logo" alt="Liverpool">
+                                <span class="team-name">Liverpool</span>
+                            </div>
+                        </div>
+                        <span class="match-status status-live">LIVE</span>
+                        <div class="countdown" data-date="2024-11-13 22:00:00">LIVE NOW</div>
+                    </td>
+                    <td>
+                        <div class="match-time">
+                            <span class="date">Nov 13, 2024</span>
+                            <span class="time">22:00</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="watch-btn" data-video="https://stream2.example.com/man-utd-liverpool.m3u8">
+                            <i class="fas fa-play-circle"></i> Watch
+                        </button>
+                    </td>
+                </tr>
+
+                <!-- PSG vs Bayern Munich -->
+                <tr>
+                    <td>
+                        <div class="match-cell">
+                            <div class="team-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/1200px-Paris_Saint-Germain_F.C..svg.png" class="team-logo" alt="PSG">
+                                <span class="team-name">Paris Saint-Germain</span>
+                            </div>
+                            <span>vs</span>
+                            <div class="team-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_München_logo_%282017%29.svg/1200px-FC_Bayern_München_logo_%282017%29.svg.png" class="team-logo" alt="Bayern Munich">
+                                <span class="team-name">Bayern Munich</span>
+                            </div>
+                        </div>
+                        <span class="match-status status-upcoming">Upcoming</span>
+                        <div class="countdown" data-date="2024-11-14 18:00:00">--:--:--</div>
+                    </td>
+                    <td>
+                        <div class="match-time">
+                            <span class="date">Nov 14, 2024</span>
+                            <span class="time">18:00</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="watch-btn" data-video="https://stream3.example.com/psg-bayern.m3u8">
+                            <i class="fas fa-play-circle"></i> Watch
+                        </button>
+                    </td>
+                </tr>
+
+                <!-- Juventus vs Inter Milan -->
+                <tr>
+                    <td>
+                        <div class="match-cell">
+                            <div class="team-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juventus_FC_2017_icon.svg/1200px-Juventus_FC_2017_icon.svg.png" class="team-logo" alt="Juventus">
+                                <span class="team-name">Juventus</span>
+                            </div>
+                            <span>vs</span>
+                            <div class="team-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/1200px-FC_Internazionale_Milano_2021.svg.png" class="team-logo" alt="Inter Milan">
+                                <span class="team-name">Inter Milan</span>
+                            </div>
+                        </div>
+                        <span class="match-status status-upcoming">Upcoming</span>
+                        <div class="countdown" data-date="2024-11-14 21:00:00">--:--:--</div>
+                    </td>
+                    <td>
+                        <div class="match-time">
+                            <span class="date">Nov 14, 2024</span>
+                            <span class="time">21:00</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="watch-btn" data-video="https://stream4.example.com/juventus-inter.m3u8">
+                            <i class="fas fa-play-circle"></i> Watch
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="channels">
+        <h2 class="css-3d-text">TV CHANNELS BY COUNTRY</h2>
+        
+<!-- UK Channels -->
+        <div class="country-channels">
+            <h3><i class="fas fa-globe-europe"></i> United Kingdom <i class="fas fa-chevron-down"></i></h3>
+            <div class="channel-list">
+                <button class="watch-btn" data-video="https://stream.example.com/bbc-sports.m3u8">
+                    <i class="fas fa-play-circle"></i> BBC Sports
+                </button>
+                <button class="watch-btn" data-video="https://stream.example.com/sky-sports.m3u8">
+                    <i class="fas fa-play-circle"></i> Sky Sports
+                </button>
+            </div>
+        </div>
+
+        <!-- Spain Channels -->
+        <div class="country-channels">
+            <h3><i class="fas fa-globe-europe"></i> Spain <i class="fas fa-chevron-down"></i></h3>
+            <div class="channel-list">
+                <button class="watch-btn" data-video="https://stream.example.com/movistar.m3u8">
+                    <i class="fas fa-play-circle"></i> Movistar+
+                </button>
+                <button class="watch-btn" data-video="https://stream.example.com/gol.m3u8">
+                    <i class="fas fa-play-circle"></i> GOL TV
+                </button>
+            </div>
+        </div>
+
+        <!-- USA Channels -->
+        <div class="country-channels">
+            <h3><i class="fas fa-globe-americas"></i> USA <i class="fas fa-chevron-down"></i></h3>
+            <div class="channel-list">
+                <button class="watch-btn" data-video="https://stream.example.com/espn.m3u8">
+                    <i class="fas fa-play-circle"></i> ESPN
+                </button>
+                <button class="watch-btn" data-video="https://stream.example.com/fox.m3u8">
+                    <i class="fas fa-play-circle"></i> Fox Sports
+                </button>
+            </div>
+        </div>
+
+        <!-- Germany Channels -->
+        <div class="country-channels">
+            <h3><i class="fas fa-globe-europe"></i> Germany <i class="fas fa-chevron-down"></i></h3>
+            <div class="channel-list">
+                <button class="watch-btn" data-video="https://stream.example.com/sky-de.m3u8">
+                    <i class="fas fa-play-circle"></i> Sky Sport DE
+                </button>
+                <button class="watch-btn" data-video="https://stream.example.com/dazn-de.m3u8">
+                    <i class="fas fa-play-circle"></i> DAZN DE
+                </button>
+            </div>
+        </div>
+
+        <!-- Italy Channels -->
+        <div class="country-channels">
+            <h3><i class="fas fa-globe-europe"></i> Italy <i class="fas fa-chevron-down"></i></h3>
+            <div class="channel-list">
+                <button class="watch-btn" data-video="https://stream.example.com/sky-italia.m3u8">
+                    <i class="fas fa-play-circle"></i> Sky Sport Italia
+                </button>
+                <button class="watch-btn" data-video="https://stream.example.com/rai-sport.m3u8">
+                    <i class="fas fa-play-circle"></i> Rai Sport
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="modal" id="videoModal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <video controls>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<script>
+// Navigation
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
         e.preventDefault();
-        const id = link.getAttribute('data-section');
-        document.querySelector('.active').classList.remove('active');
-        document.querySelector(`#${id}`).classList.add('active');
-      });
+        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(link.getAttribute('data-section')).classList.add('active');
     });
-    // Disable right-click
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
+});
+
+// Countdown Timer
+function updateCountdown() {
+    document.querySelectorAll('.countdown').forEach(timer => {
+        const targetDate = new Date(timer.getAttribute('data-date')).getTime();
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference > 0) {
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            timer.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        } else {
+            timer.textContent = "Started!";
+        }
+    });
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Channel Categories
+document.querySelectorAll('.country-channels h3').forEach(header => {
+    header.addEventListener('click', () => {
+        const channelList = header.nextElementSibling;
+        const isActive = channelList.classList.contains('active');
+        
+        // Close all channel lists
+        document.querySelectorAll('.channel-list').forEach(list => {
+            list.classList.remove('active');
         });
+        
+        // Toggle clicked channel list
+        if (!isActive) {
+            channelList.classList.add('active');
+        }
+    });
+});
 
-        // Disable Ctrl+U
-        document.addEventListener('keydown', function (e) {
-            if (e.ctrlKey && e.keyCode == 85) {
-                e.preventDefault();
-            }
-        });
+// Video Modal
+const modal = document.getElementById('videoModal');
+const video = modal.querySelector('video');
 
-  </script>
+document.querySelectorAll('.watch-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const videoSource = btn.getAttribute('data-video');
+        video.src = videoSource;
+        modal.classList.add('active');
+        video.play();
+    });
+});
 
+modal.querySelector('.close-btn').addEventListener('click', () => {
+    modal.classList.remove('active');
+    video.pause();
+    video.src = '';
+});
 
-
-</body></html>
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('active');
+        video.pause();
+        video.src = '';
+    }
+});
+</script>
+</body>
+</html>
